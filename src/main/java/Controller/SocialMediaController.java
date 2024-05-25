@@ -42,10 +42,10 @@ public class SocialMediaController {
         app.post("/login", this::login);
         app.post("/messages", this::createMessage);
         app.get("/messages", this::getAllMessages);
-        app.get("/messages/:message_id", this::getMessageById);
-        app.delete("/messages/:message_id", this::deleteMessage);
-        app.patch("/messages/:message_id", this::updateMessage);
-        app.get("/accounts/:account_id/messages", this::getMessagesByUserId);
+        app.get("/messages/{message_id}", this::getMessageById);
+        app.delete("/messages/{message_id}", this::deleteMessage);
+        app.patch("/messages/{message_id}", this::updateMessage);
+        app.get("/accounts/{account_id}/messages", this::getMessagesByUserId);
         return app;
     }
     private void register(Context ctx) {
